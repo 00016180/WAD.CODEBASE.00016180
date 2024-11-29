@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\WAD.BACKEND.00016180.props" />
+</Project>
