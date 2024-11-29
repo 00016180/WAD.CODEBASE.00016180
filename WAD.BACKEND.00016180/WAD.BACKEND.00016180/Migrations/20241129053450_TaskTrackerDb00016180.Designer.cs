@@ -12,7 +12,7 @@ using WAD.BACKEND._00016180.Data;
 namespace WAD.BACKEND._00016180.Migrations
 {
     [DbContext(typeof(TaskTrackerDbContext))]
-    [Migration("20241129051455_TaskTrackerDb00016180")]
+    [Migration("20241129053450_TaskTrackerDb00016180")]
     partial class TaskTrackerDb00016180
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
