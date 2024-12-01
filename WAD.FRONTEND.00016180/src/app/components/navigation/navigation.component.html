@@ -1,0 +1,16 @@
+<mat-toolbar
+  class="flex items-center justify-between px-4 py-2 bg-blue-600 !bg-blue-400"
+>
+  <div class="flex items-center space-x-2">
+    <button
+      mat-icon-button
+      aria-label="Home"
+      (click)="HomeIconClicked()"
+      class="focus:outline-none text-white"
+    >
+      <mat-icon>home</mat-icon>
+    </button>
+    <span class="text-white font-semibold">Task Tracker</span>
+  </div>
+  <button mat-raised-button (click)="CreateClicked()">Create</button>
+</mat-toolbar>

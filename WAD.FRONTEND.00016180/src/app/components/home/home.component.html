@@ -1,20 +1,4 @@
-<div class="flex justify-between my-4 mx-9">
-  <h1>Tasks</h1>
-  <button
-    mat-raised-button
-    style="
-      margin-top: 5px;
-      color: white;
-      background-color: rgb(0, 170, 255);
-      font-size: 18px;
-      padding: 16px 32px;
-    "
-    (click)="CreateClicked()"
-  >
-    Create
-  </button>
-</div>
-<div class="flex justify-center mb-2 mx-3">
+<div class="flex justify-center mb-2">
   <table mat-table [dataSource]="tasks" class="mat-elevation-z8">
     <ng-container matColumnDef="Id">
       <th mat-header-cell *matHeaderCellDef>Id</th>
