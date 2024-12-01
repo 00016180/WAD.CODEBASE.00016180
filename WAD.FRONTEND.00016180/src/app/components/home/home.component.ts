@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
 import { Task } from '../../types';
 import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatTableModule],
+  imports: [MatTableModule, MatButtonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
   tasks: Task[] = [
     {
+      IsCompleted: true,
       Id: 1,
       Title: 'Complete Project',
       Notes: 'Finish the coding project by the deadline.',
@@ -24,6 +27,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: false,
       Id: 2,
       Title: 'Buy Groceries',
       Notes: 'Purchase items for the week.',
@@ -36,6 +40,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 3,
       Title: 'Read Book',
       Notes: 'Read the latest novel.',
@@ -48,6 +53,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 4,
       Title: 'Plan Vacation',
       Notes: 'Research and plan a vacation destination.',
@@ -60,6 +66,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: false,
       Id: 5,
       Title: 'Exercise',
       Notes: 'Go for a jog or hit the gym.',
@@ -72,6 +79,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 6,
       Title: 'Write Blog Post',
       Notes: 'Create a new blog post on a relevant topic.',
@@ -84,6 +92,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 7,
       Title: 'Attend Meeting',
       Notes: 'Participate in the weekly team meeting.',
@@ -96,6 +105,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: false,
       Id: 8,
       Title: 'Cook Dinner',
       Notes: 'Prepare a delicious dinner for the family.',
@@ -108,6 +118,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 9,
       Title: 'Learn New Skill',
       Notes: 'Start learning a new programming language.',
@@ -120,6 +131,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 10,
       Title: 'Watch Movie',
       Notes: 'Catch up on the latest blockbuster.',
@@ -132,6 +144,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: false,
       Id: 11,
       Title: 'Organize Workspace',
       Notes: 'Declutter and organize the home office.',
@@ -144,6 +157,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 12,
       Title: 'Attend Webinar',
       Notes: 'Participate in a webinar on emerging technologies.',
@@ -156,6 +170,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 13,
       Title: 'Practice Instrument',
       Notes: 'Spend time practicing the guitar.',
@@ -168,6 +183,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: false,
       Id: 14,
       Title: 'Update Resume',
       Notes: 'Revise and update the professional resume.',
@@ -180,6 +196,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 15,
       Title: 'Explore Local Park',
       Notes: 'Take a leisurely walk in the nearby park.',
@@ -192,6 +209,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 16,
       Title: 'Complete Online Course',
       Notes: 'Finish the online course on data science.',
@@ -204,6 +222,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 17,
       Title: 'Volunteer for Charity',
       Notes: 'Contribute time to a local charity or community service.',
@@ -216,6 +235,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 18,
       Title: 'Visit Art Gallery',
       Notes: 'Explore the latest art exhibitions in the city.',
@@ -228,6 +248,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 19,
       Title: 'Review Budget',
       Notes: 'Assess and review monthly budget and expenses.',
@@ -240,6 +261,7 @@ export class HomeComponent {
       DueDate: new Date('2024-11-29T05:41:57.12Z'),
     },
     {
+      IsCompleted: true,
       Id: 20,
       Title: 'Practice Meditation',
       Notes: 'Engage in daily meditation for mindfulness.',
@@ -254,6 +276,7 @@ export class HomeComponent {
   ];
   displayedColumns: string[] = [
     'Id',
+    'Status',
     'Title',
     'Notes',
     'Category Name',
@@ -263,6 +286,6 @@ export class HomeComponent {
   ];
   formatDate(date: string | Date): string {
     const parsedDate = typeof date === 'string' ? new Date(date) : date;
-    return parsedDate.toDateString(); // e.g., "Fri Nov 29 2024"
+    return parsedDate.toDateString();
   }
 }
