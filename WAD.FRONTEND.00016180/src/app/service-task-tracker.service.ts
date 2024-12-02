@@ -38,6 +38,8 @@ export class ServiceTaskTrackerService {
   }
 
   getAllCategories() {
-    return this.httpClient.get('https://localhost:5169/api/Category/GetAll');
+    return this.httpClient.get<Category[]>(
+      'https://localhost:5169/api/Category/GetAll'
+    );
   }
 }

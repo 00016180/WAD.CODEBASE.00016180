@@ -1,15 +1,15 @@
 export interface Task {
-    Id: number;
-    Title: string;
-    Notes: string;
-    CategoryId?: number;
-    Category?: Category;
-    IsCompleted?: boolean;
-    EnteredDate: Date;
-    DueDate: Date;
+  id: number;
+  title: string;
+  notes: string;
+  categoryId?: number;
+  category?: Category;
+  isCompleted?: boolean;
+  enteredDate: Date;
+  dueDate: Date | string;
 }
 
 export interface Category {
-    Id: number;
-    Name: string;
+  id: number;
+  name: string;
 }

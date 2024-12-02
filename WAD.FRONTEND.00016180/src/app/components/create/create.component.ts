@@ -50,9 +50,16 @@ export class CreateComponent {
   }
 
   create() {
+    if (this.createTask.dueDate) {
+      const selectedDate = new Date(this.createTask.dueDate);
+      this.createTask.dueDate = `${selectedDate.getFullYear()}-${String(
+        selectedDate.getMonth() + 1
+      ).padStart(2, '0')}-${String(selectedDate.getDate()).padStart(2, '0')}`;
+    }
     this.createTask.categoryId = this.categoryId;
+    console.log(this.createTask);
     this.TaskTrackerService.create(this.createTask).subscribe((result) => {
-      alert('Task saved');
+      alert('Created Task!');
       this.router.navigateByUrl('home');
     });
   }
