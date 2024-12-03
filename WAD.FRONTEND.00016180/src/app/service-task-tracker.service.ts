@@ -42,4 +42,28 @@ export class ServiceTaskTrackerService {
       'https://localhost:5169/api/Category/GetAll'
     );
   }
+  getCategoryById(categoryId: number) {
+    return this.httpClient.get<Category>(
+      `https://localhost:5169/api/Category/GetById/${categoryId}`
+    );
+  }
+
+  editCategory(category: Category) {
+    return this.httpClient.put(
+      'https://localhost:5169/api/Category/Update',
+      category
+    );
+  }
+
+  deleteCategory(id: number) {
+    return this.httpClient.delete(
+      `https://localhost:5169/api/Category/Delete/${id}`
+    );
+  }
+  createCategory(category: Category) {
+    return this.httpClient.post<Category>(
+      'https://localhost:5169/api/Category/Create',
+      category
+    );
+  }
 }

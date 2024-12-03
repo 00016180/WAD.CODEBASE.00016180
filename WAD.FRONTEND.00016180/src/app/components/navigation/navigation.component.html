@@ -1,16 +1,23 @@
 <mat-toolbar
   class="flex items-center justify-between px-4 py-2 bg-blue-600 !bg-blue-400"
 >
+  <h1 class="text-white">Task Tracker</h1>
   <div class="flex items-center space-x-2">
     <button
-      mat-icon-button
-      aria-label="Home"
+      mat-button
+      aria-label="Task"
       (click)="HomeIconClicked()"
       class="focus:outline-none text-white"
     >
-      <mat-icon>home</mat-icon>
+      <span class="text-white">Tasks</span>
     </button>
-    <span class="text-white font-semibold">Task Tracker</span>
+    <button
+      mat-button
+      aria-label="Category"
+      (click)="CategoryClicked()"
+      class="focus:outline-none text-white"
+    >
+      <span class="text-white ">Category</span>
+    </button>
   </div>
-  <button mat-raised-button (click)="CreateClicked()">Create</button>
 </mat-toolbar>

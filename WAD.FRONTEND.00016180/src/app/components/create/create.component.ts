@@ -48,7 +48,9 @@ export class CreateComponent {
       (result) => (this.categories = result)
     );
   }
-
+  cancel() {
+    this.router.navigateByUrl('home');
+  }
   create() {
     if (this.createTask.dueDate) {
       const selectedDate = new Date(this.createTask.dueDate);

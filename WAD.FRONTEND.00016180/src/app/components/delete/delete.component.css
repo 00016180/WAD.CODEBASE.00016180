@@ -1,0 +1,41 @@
+.responsive-card {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .responsive-card {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+
+  .p-8 {
+    padding: 1rem;
+  }
+
+  .gap-4 {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-card {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .text-3xl {
+    font-size: 1.2rem;
+  }
+
+  .p-8 {
+    padding: 0.5rem;
+  }
+
+  .gap-4 {
+    gap: 0.5rem;
+  }
+}

@@ -12,16 +12,8 @@
     font-size: 1.8rem;
   }
 
-  .p-8 {
-    padding: 1rem;
-  }
-
-  .gap-4 {
-    gap: 1rem;
-  }
-
-  mat-chip {
-    font-size: 0.9rem;
+  .text-2xl {
+    font-size: 1.5rem;
   }
 }
 
@@ -32,22 +24,10 @@
   }
 
   .text-3xl {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
-  .p-8 {
-    padding: 0.5rem;
-  }
-
-  .gap-4 {
-    gap: 0.5rem;
-  }
-
-  mat-chip {
-    font-size: 0.8rem;
-  }
-
-  span {
-    font-size: 0.9rem;
+  .text-2xl {
+    font-size: 1.2rem;
   }
 }

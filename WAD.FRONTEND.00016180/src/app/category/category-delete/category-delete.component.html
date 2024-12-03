@@ -1,0 +1,19 @@
+<div class="flex mt-8 justify-center">
+  <mat-card class="shadow w-full max-w-lg responsive-card">
+    <mat-card-content>
+      <div class="p-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">
+          {{ deleteCategory.name }}
+        </h2>
+      </div>
+      <div class="flex justify-around gap-4 flex-wrap mt-4">
+        <button mat-raised-button color="primary" (click)="delete()">
+          Delete
+        </button>
+        <button mat-raised-button color="warn" (click)="toHome()">
+          Cancel
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

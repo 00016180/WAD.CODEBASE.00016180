@@ -1,6 +1,6 @@
 <div class="p-8 mt-8 flex justify-center">
-  <form class="shadow border w-4/12 p-4">
-    <div class="flex">
+  <form class="shadow border w-full max-w-lg p-4 responsive-form">
+    <div class="flex flex-col gap-4">
       <mat-form-field class="w-full">
         <mat-label>Title</mat-label>
         <input
@@ -10,8 +10,7 @@
           [(ngModel)]="createTask.title"
         />
       </mat-form-field>
-    </div>
-    <div class="flex">
+
       <mat-form-field class="w-full">
         <mat-label>Notes</mat-label>
         <input
@@ -21,20 +20,18 @@
           [(ngModel)]="createTask.notes"
         />
       </mat-form-field>
-    </div>
-    <div class="flex">
+
       <mat-form-field class="w-full">
         <mat-label>Choose Category</mat-label>
         <mat-select [(ngModel)]="categoryId" name="Category">
-          @for(c of categories; track c){
+          @for(c of categories; track c) {
           <mat-option [value]="c.id">
             {{ c.name }}
           </mat-option>
           }
         </mat-select>
       </mat-form-field>
-    </div>
-    <div class="flex">
+
       <mat-form-field class="w-full">
         <mat-label>Due Date</mat-label>
         <input
@@ -51,10 +48,11 @@
       </mat-form-field>
     </div>
 
-    <div class="flex justify-center">
+    <div class="flex justify-center gap-4 mt-6 flex-wrap">
       <button mat-raised-button color="primary" (click)="create()">
         Create
       </button>
+      <button mat-raised-button color="warn" (click)="cancel()">Cancel</button>
     </div>
   </form>
 </div>

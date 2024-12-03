@@ -36,19 +36,15 @@ export class HomeComponent {
     return parsedDate.toDateString();
   }
   EditClicked(taskId: number) {
-    console.log(taskId, 'Edit');
     this.router.navigateByUrl('/edit/' + taskId);
   }
   DetailsClicked(taskId: number) {
-    console.log(taskId, 'Details');
     this.router.navigateByUrl('/details/' + taskId);
   }
   DeleteClicked(taskId: number) {
-    console.log(taskId, 'Delete');
     this.router.navigateByUrl('/delete/' + taskId);
   }
   CreateClicked() {
-    console.log('Create');
     this.router.navigateByUrl('/create');
   }
 }

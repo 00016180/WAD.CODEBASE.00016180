@@ -19,4 +19,7 @@ export class NavigationComponent {
   HomeIconClicked() {
     this.router.navigateByUrl('home');
   }
+  CategoryClicked() {
+    this.router.navigateByUrl('category-home');
+  }
 }

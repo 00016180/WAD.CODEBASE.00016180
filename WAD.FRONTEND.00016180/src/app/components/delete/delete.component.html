@@ -1,7 +1,7 @@
 <div class="flex mt-8 justify-center">
-  <mat-card class="shadow w-4/12">
+  <mat-card class="shadow w-full max-w-lg responsive-card">
     <mat-card-content>
-      <div class="p-8">
+      <div class="p-8 text-center">
         <h2 class="text-3xl font-bold mb-4">
           {{ deleteTask.title }}
         </h2>
@@ -27,16 +27,18 @@
           </span>
         </div>
         <div class="mt-4">
-          <span class="text-gray-700">Status</span>
+          <span class="text-gray-700">Status:</span>
           <span class="ml-2">
             {{ deleteTask.isCompleted ? "Completed" : "Not Completed" }}
           </span>
         </div>
       </div>
-      <div class="flex justify-around">
-        <button mat-raised-button (click)="toHome()">Cancel</button>
+      <div class="flex justify-around gap-4 flex-wrap mt-4">
         <button mat-raised-button color="primary" (click)="delete()">
           Delete
+        </button>
+        <button mat-raised-button color="warn" (click)="toHome()">
+          Cancel
         </button>
       </div>
     </mat-card-content>

@@ -1,18 +1,16 @@
-<div class="p-8 mt-8 flex justify-center">
-  <form class="shadow border w-4/12 p-4">
-    <div class="flex">
+<div class="flex justify-center p-8 mt-8">
+  <form class="shadow border w-full max-w-lg p-4 responsive-form">
+    <div class="flex flex-col gap-4">
       <mat-form-field class="w-full">
         <mat-label>Title</mat-label>
         <input matInput name="title" type="text" [(ngModel)]="editTask.title" />
       </mat-form-field>
-    </div>
-    <div class="flex">
+
       <mat-form-field class="w-full">
         <mat-label>Notes</mat-label>
         <input matInput name="notes" type="text" [(ngModel)]="editTask.notes" />
       </mat-form-field>
-    </div>
-    <div class="flex">
+
       <mat-form-field class="w-full">
         <mat-label>Choose Category</mat-label>
         <mat-select
@@ -20,15 +18,14 @@
           [(value)]="selected"
           name="Category"
         >
-          @for(c of categories; track c){
+          @for(c of categories; track c) {
           <mat-option [value]="c.id">
-            {{ editTask.category?.name }}
+            {{ c.name }}
           </mat-option>
           }
         </mat-select>
       </mat-form-field>
-    </div>
-    <div class="flex">
+
       <mat-form-field class="w-full">
         <mat-label>Due Date</mat-label>
         <input
@@ -43,16 +40,17 @@
         ></mat-datepicker-toggle>
         <mat-datepicker #dueDatePicker></mat-datepicker>
       </mat-form-field>
+
+      <div class="flex items-center">
+        <mat-checkbox [(ngModel)]="editTask.isCompleted" name="isCompleted">
+          Completed
+        </mat-checkbox>
+      </div>
     </div>
-    <!-- Checkbox for Completed -->
-    <div class="flex items-center mt-4">
-      <mat-checkbox [(ngModel)]="editTask.isCompleted" name="isCompleted">
-        Completed
-      </mat-checkbox>
-    </div>
-    <div class="flex justify-around">
-      <button mat-raised-button (click)="toHome()">Cancel</button>
+
+    <div class="flex justify-center gap-4 mt-6 flex-wrap">
       <button mat-raised-button color="primary" (click)="edit()">Edit</button>
+      <button mat-raised-button color="warn" (click)="toHome()">Cancel</button>
     </div>
   </form>
 </div>

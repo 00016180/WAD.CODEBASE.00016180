@@ -1,63 +1,60 @@
-.responsive-button {
+/* .responsive-button {
   white-space: nowrap;
-}
-
-.responsive-table {
-  min-width: 600px;
-}
-
-.action-button {
-  color: white;
-}
+} */
 
 .edit-button {
+  color: white;
   background-color: rgb(0, 170, 255);
 }
 
 .details-button {
+  color: white;
   background-color: rgb(255, 0, 242);
 }
 
 .delete-button {
+  color: white;
   background-color: rgb(255, 0, 64);
 }
 
 @media (max-width: 768px) {
-  .responsive-table {
-    font-size: 0.9rem;
-    min-width: auto;
+  .flex-col {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .responsive-button {
-    width: 30%;
+    width: 20%;
+    margin-top: 0.5rem;
   }
 
-  .flex-wrap {
-    gap: 1rem;
+  .gap-3 {
+    gap: 0.7rem;
   }
-  .gap-2 {
-    gap: 0.3rem;
+
+  table {
+    font-size: 0.9rem;
   }
+
   h1 {
     font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .responsive-table {
-    font-size: 0.8rem;
-    overflow-x: auto;
+  .responsive-button {
+    width: 30%;
   }
 
-  .flex-wrap {
-    gap: 0.5rem;
+  table {
+    font-size: 0.8rem;
   }
 
   h1 {
     font-size: 1.25rem;
   }
 
-  button {
-    width: 100%;
+  .gap-3 {
+    gap: 0.3rem;
   }
 }
