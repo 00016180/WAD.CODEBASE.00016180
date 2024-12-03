@@ -16,7 +16,11 @@ namespace WAD.BACKEND._00016180.Repositories
             _context = context;
         }
         // Get all tasks from database 00016180
-        public async Task<IEnumerable<Models.Task>> GetAll() => await _context.Tasks.ToArrayAsync();
+        public async Task<IEnumerable<Models.Task>> GetAll()
+        {
+            return await _context.Tasks.Include(t => t.Category).ToArrayAsync();
+        }
+
         // Get task by id from database 00016180
         public async Task<Models.Task> GetById(int id)
         {
@@ -25,11 +29,18 @@ namespace WAD.BACKEND._00016180.Repositories
         // Add new task to database 00016180
         public async Task Add(Models.Task entity)
         {
+            if (entity.CategoryId == null)
+                throw new ArgumentException("CategoryId cannot be null.");
+
             entity.Category = await _context.Categories.FindAsync(entity.CategoryId.Value);
+
+            if (entity.Category == null)
+                throw new ArgumentException("Invalid CategoryId.");
 
             await _context.Tasks.AddAsync(entity);
             await _context.SaveChangesAsync();
         }
+
         // Update task data 00016180
         public async Task Update(Models.Task entity)
         {
