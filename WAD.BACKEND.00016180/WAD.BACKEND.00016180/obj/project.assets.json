@@ -2444,15 +2444,14 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\WAD.CODEBASE.00016180\\WAD.BACKEND.00016180\\WAD.BACKEND.00016180\\WAD.BACKEND.00016180.csproj",
+      "projectUniqueName": "C:\\cw\\WAD.CODEBASE.00016180\\WAD.BACKEND.00016180\\WAD.BACKEND.00016180\\WAD.BACKEND.00016180.csproj",
       "projectName": "WAD.BACKEND.00016180",
-      "projectPath": "C:\\WAD.CODEBASE.00016180\\WAD.BACKEND.00016180\\WAD.BACKEND.00016180\\WAD.BACKEND.00016180.csproj",
+      "projectPath": "C:\\cw\\WAD.CODEBASE.00016180\\WAD.BACKEND.00016180\\WAD.BACKEND.00016180\\WAD.BACKEND.00016180.csproj",
       "packagesPath": "C:\\Users\\ENVY\\.nuget\\packages\\",
-      "outputPath": "C:\\WAD.CODEBASE.00016180\\WAD.BACKEND.00016180\\WAD.BACKEND.00016180\\obj\\",
+      "outputPath": "C:\\cw\\WAD.CODEBASE.00016180\\WAD.BACKEND.00016180\\WAD.BACKEND.00016180\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ENVY\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\ENVY\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
